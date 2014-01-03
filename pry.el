@@ -160,7 +160,7 @@
 
 (if pry-raw-map
     nil
-  (setq pry-raw-map (copy-keymap term-raw-map))
+  (setq pry-raw-map (copy-keymap (default-value 'term-raw-map)))
   (define-key pry-raw-map [remap self-insert-command] 'pry-send-raw)
   (define-key pry-raw-map [remap term-send-raw] 'pry-send-raw)
   (define-key pry-raw-map [remap term-send-right] 'pry-send-right)
